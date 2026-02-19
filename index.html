@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <header>Elif Yaren Çekiç</header>
+    <!--navbarda her bir a ya bastıkça bağlantılı sect e göndwrecek-->
     <nav>
         <ul>
             <li>
-                <a href="#main">Mainn</a>
+                <a href="#main">Main</a>
             </li>
             <li>
                 <a href="#works">Works</a>
@@ -21,16 +23,69 @@
         </ul>
     </nav>
 
+    <!--görsel efekt eklenecek portfolio sahibinin fotoğrafı adı işine uygun arkaplan-->
     <section id="main">
-        
+        <h1>Elif Yaren Çekiç</h1>
+        <img src="#mainpp">
     </section>
 
+    <!--projeler slider ı eklenecek-->
     <section id="works">
-
+        <div id="project-slider">
+            <!--slider üstünde filtreler butonları olacak projedeki tag lere göre filtrelenecek-->
+            <div class="project-card">
+                <!--proje kartlarına ön yüz ve arka yüz eklenecek kartın üstüne gelindiğinde arka yüz çevrilecek-->
+                <div class="project-card-front-side">
+                    <img class="project-card-image" src="#projectimg">
+                    <h3 class="project-card-title">Proje1</h3>
+                    <div class="project-card-tags-tab">
+                        <ul>
+                            <!--bu tag lar sayesinde filtreleme yapılacak-->
+                            <li>
+                                <a class="project-card-tag" href="#javascript">javascript</a>
+                            </li>
+                            <li>
+                                <a class="project-card-tag" href="#sql">sql</a>
+                            </li>
+                            <li>
+                                <a class="project-card-tag" href="#node">node</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card-back-side">
+                    <p class="project-card-project-description"></p>
+                    <a class="project-card-project-link" href="">Web site Link</a>
+                    <a class="project-card-project-code-link" href="">Github Link</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="connect">
-
+        <!--sosyal medya linkleri-->
+        <div id="connect-links-tab">
+            <a class="connect-links" href="#instagram"><i class="fab fa-instagram"></i></a>
+            <a class="connect-links" href="#linkedin"><i class="fab fa-linkedin"></i></a>
+            <a class="connect-links" href="#github"><i class="fab fa-github"></i></a>
+            <a class="connect-links" href="#twitter"><i class="fab fa-twitter"></i></a>
+            <a class="connect-links" href="#mail"><i class="fas fa-envelope"></i></a>
+            <a class="connect-links" href="#whattsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <!--iletişim formu formspree ye göndereceğim action ı-->
+        <form id="connect-form" action="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="form-name-input">
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" id="form-surname-input">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="form-email-input" required>
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="form-subject-input" required>
+            <label for="messages">Messages</label>
+            <textarea name="messages" id="form-messages-input"></textarea>
+            <button id="form-send-bttn" type="submit">Gönder</button>
+        </form>
     </section>
 
 </body>
