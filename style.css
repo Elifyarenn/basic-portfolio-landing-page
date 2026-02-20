@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(15, 15, 15, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+#nav-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* MAIN */
+
+#main {
+    min-height: 100vh;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+#main-profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#main h1 {
+    font-size: 2.5rem;
+}
+
+#main-project-connact-bttn {
+    margin-top: 20px;
+    padding: 14px 36px;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* WORKS */
+
+#works {
+    padding: 120px 40px;
+}
+
+/* FILTERS */
+
+#project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.filter-btn.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* PROJECT GRID */
+
+#project-slider {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+    width: 320px;
+    height: 420px;
+    perspective: 1200px;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front-side,
+.project-card-back-side {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+/* FRONT */
+
+.project-card-front-side {
+    background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+    gap: 16px;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.project-card-title {
+    font-size: 1.4rem;
+}
+
+/* TAGS */
+
+.project-card-tags-tab {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.project-card-tags-tab li {
+    list-style: none;
+}
+
+.project-card-tag {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+/* BACK */
+
+.project-card-back-side {
+    background: linear-gradient(145deg, #ffffff, #eeeeee);
+    color: #000000;
+    transform: rotateY(180deg);
+    justify-content: space-between;
+}
+
+.project-card-project-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-card-project-link,
+.project-card-project-code-link {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.project-card-project-link {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.project-card-project-code-link {
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+/* CONNECT */
+
+#connect {
+    padding: 120px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+#connect-links-tab {
+    display: flex;
+    gap: 20px;
+}
+
+.connect-links {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* FORM */
+
+#connect-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#connect-form input,
+#connect-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+#form-send-bttn {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}

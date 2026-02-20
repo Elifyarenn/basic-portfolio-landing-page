@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>Elif Yaren Çekiç</header>
     <!--navbarda her bir a ya bastıkça bağlantılı sect e göndwrecek-->
     <nav>
+        <img id="nav-image" src="image/images.png" alt="">
         <ul>
             <li>
                 <a href="#main">Main</a>
@@ -25,42 +26,108 @@
 
     <!--görsel efekt eklenecek portfolio sahibinin fotoğrafı adı işine uygun arkaplan-->
     <section id="main">
+        <img id="main-profile-picture" src="image/images.png">
         <h1>Elif Yaren Çekiç</h1>
-        <img src="#mainpp">
+        <button id="main-project-connact-bttn">Start a project with me </button>
     </section>
 
     <!--projeler slider ı eklenecek-->
     <section id="works">
-        <div id="project-slider">
-            <!--slider üstünde filtreler butonları olacak projedeki tag lere göre filtrelenecek-->
-            <div class="project-card">
-                <!--proje kartlarına ön yüz ve arka yüz eklenecek kartın üstüne gelindiğinde arka yüz çevrilecek-->
+
+    <div id="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="node">Node</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+    </div>
+
+    <div id="project-slider">
+
+        <div class="project-card" data-tags="javascript frontend">
+            <div class="project-card-inner">
                 <div class="project-card-front-side">
-                    <img class="project-card-image" src="#projectimg">
-                    <h3 class="project-card-title">Proje1</h3>
+                    <img class="project-card-image" src="image/indir.jpg">
+                    <h2 class="project-card-title">Portfolio Web Site</h2>
                     <div class="project-card-tags-tab">
-                        <ul>
-                            <!--bu tag lar sayesinde filtreleme yapılacak-->
-                            <li>
-                                <a class="project-card-tag" href="#javascript">javascript</a>
-                            </li>
-                            <li>
-                                <a class="project-card-tag" href="#sql">sql</a>
-                            </li>
-                            <li>
-                                <a class="project-card-tag" href="#node">node</a>
-                            </li>
-                        </ul>
+                        <li><span class="project-card-tag">javascript</span></li>
+                        <li><span class="project-card-tag">frontend</span></li>
                     </div>
                 </div>
                 <div class="project-card-back-side">
-                    <p class="project-card-project-description"></p>
-                    <a class="project-card-project-link" href="">Web site Link</a>
-                    <a class="project-card-project-code-link" href="">Github Link</a>
+                    <p class="project-card-project-description">
+                        Kişisel portfolyo web sitesi. Responsive ve sade tasarım.
+                    </p>
+                    <a class="project-card-project-link" href="#">Web Site</a>
+                    <a class="project-card-project-code-link" href="#">GitHub</a>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="project-card" data-tags="javascript node">
+            <div class="project-card-inner">
+                <div class="project-card-front-side">
+                    <img class="project-card-image" src="image/indir.jpg">
+                    <h2 class="project-card-title">Task Manager</h2>
+                    <div class="project-card-tags-tab">
+                        <li><span class="project-card-tag">javascript</span></li>
+                        <li><span class="project-card-tag">node</span></li>
+                    </div>
+                </div>
+                <div class="project-card-back-side">
+                    <p class="project-card-project-description">
+                        Node.js tabanlı görev takip uygulaması.
+                    </p>
+                    <a class="project-card-project-link" href="#">Web Site</a>
+                    <a class="project-card-project-code-link" href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-tags="sql javascript">
+            <div class="project-card-inner">
+                <div class="project-card-front-side">
+                    <img class="project-card-image" src="image/indir.jpg">
+                    <h2 class="project-card-title">Student Database</h2>
+                    <div class="project-card-tags-tab">
+                        <li><span class="project-card-tag">sql</span></li>
+                        <li><span class="project-card-tag">javascript</span></li>
+                    </div>
+                </div>
+                <div class="project-card-back-side">
+                    <p class="project-card-project-description">
+                        SQL veritabanı ile çalışan öğrenci kayıt sistemi.
+                    </p>
+                    <a class="project-card-project-link" href="#">Web Site</a>
+                    <a class="project-card-project-code-link" href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-tags="frontend javascript">
+            <div class="project-card-inner">
+                <div class="project-card-front-side">
+                    <img class="project-card-image" src="image/indir.jpg">
+                    <h2 class="project-card-title">Landing Page</h2>
+                    <div class="project-card-tags-tab">
+                        <li><span class="project-card-tag">frontend</span></li>
+                        <li><span class="project-card-tag">javascript</span></li>
+                    </div>
+                </div>
+                <div class="project-card-back-side">
+                    <p class="project-card-project-description">
+                        Modern UI odaklı ürün tanıtım sayfası.
+                    </p>
+                    <a class="project-card-project-link" href="#">Web Site</a>
+                    <a class="project-card-project-code-link" href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+</section>
 
     <section id="connect">
         <!--sosyal medya linkleri-->
